@@ -90,7 +90,7 @@ artist_table_insert = ("INSERT INTO artists(artist_id, \
                                             longitude) \
                         VALUES(%s, %s, %s, %s, %s) \
                         ON CONFLICT (song_id) \
-                            DO NOTHING""
+                            DO NOTHING"
 )
 
 time_table_insert = ("INSERT INTO time(start_time, \

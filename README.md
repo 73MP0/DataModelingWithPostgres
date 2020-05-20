@@ -16,6 +16,9 @@ Dimension Tables
 - time - timestamps of records in songplays broken down into specific units
     - start_time, hour, day, week, month, year, weekday
 
+# Data scrubbing
+
+
 # sql_queries.py
 DROP TABLES
 - set of drop commands saved in variables to drop the table if it already exists
