@@ -16,18 +16,22 @@ Dimension Tables
 - time - timestamps of records in songplays broken down into specific units
     - start_time, hour, day, week, month, year, weekday
 
-# Data scrubbing
-
+# Process
+The `etl.ipynb` notebook was the driving tool used in the project. It mapped out what and how we should design out pipeline that would be written out at the end. The `sql_queries.py` file helped store all the SQL commands that will carry out the work of dropping tables, creating tables, inserting, etc. In parallel, we use the `test.ipynb` to test and verify if our changes are reflected on the database.
 
 # sql_queries.py
 DROP TABLES
 - set of drop commands saved in variables to drop the table if it already exists
+
 CREATE TABLES
 - table creation queries saved in variables for each table.
+
 INSERT RECORDS
 - insert commands used to make writes to the tables.
+
 FIND SONGS
 - query used to find the song to insert to the fact table
+
 QUERY LISTS
 - variables used to put the drop and create commands into a set.
 
