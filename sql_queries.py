@@ -9,39 +9,39 @@ time_table_drop = "DROP TABLE IF EXISTS time"
 
 # CREATE TABLES
 
-songplay_table_create = ("""CREATE TABLE IF NOT EXISTS songplays(songplay_id SERIAL PRIMARY KEY, \
-                                                                start_time TIMESTAMP, \
-                                                                user_id INTEGER, \
+songplay_table_create = ("""CREATE TABLE IF NOT EXISTS songplays(songplay_id SERIAL PRIMARY KEY NOT NULL, \
+                                                                start_time TIMESTAMP NOT NULL, \
+                                                                user_id INTEGER NOT NULL, \
                                                                 level VARCHAR, \
-                                                                song_id VARCHAR, \
-                                                                artist_id VARCHAR, \
+                                                                song_id VARCHAR NOT NULL, \
+                                                                artist_id VARCHAR NOT NULL, \
                                                                 session_id VARCHAR, \
                                                                 location VARCHAR, \
                                                                 user_agent VARCHAR)"""
 )
 
-user_table_create = ("""CREATE TABLE IF NOT EXISTS users(user_id INTEGER PRIMARY KEY, \
+user_table_create = ("""CREATE TABLE IF NOT EXISTS users(user_id INTEGER PRIMARY KEY NOT NULL, \
                                                           first_name VARCHAR, \
                                                           last_name VARCHAR, \
                                                           gender VARCHAR, \
                                                           level VARCHAR)"""
 )
 
-song_table_create = ("""CREATE TABLE IF NOT EXISTS songs(song_id VARCHAR PRIMARY KEY, \
+song_table_create = ("""CREATE TABLE IF NOT EXISTS songs(song_id VARCHAR PRIMARY KEY NOT NULL, \
                                                         title VARCHAR, \
                                                         artist_id VARCHAR, \
                                                         year INTEGER, \
                                                         duration DECIMAL)"""
 )
 
-artist_table_create = ("""CREATE TABLE IF NOT EXISTS artists(artist_id VARCHAR PRIMARY KEY, \
+artist_table_create = ("""CREATE TABLE IF NOT EXISTS artists(artist_id VARCHAR PRIMARY KEY NOT NULL, \
                                                              name VARCHAR, \
                                                              location VARCHAR, \
                                                              latitude DECIMAL, \
                                                              longitude DECIMAL)"""
 )
 
-time_table_create = ("""CREATE TABLE IF NOT EXISTS time(start_time TIMESTAMP PRIMARY KEY, \
+time_table_create = ("""CREATE TABLE IF NOT EXISTS time(start_time TIMESTAMP PRIMARY KEY NOT NULL, \
                                                       hour INTEGER, \
                                                       day INTEGER, \
                                                       week INTEGER, \
